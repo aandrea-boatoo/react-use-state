@@ -1,34 +1,14 @@
+import languages from "../data/languages";
 function CardComponent() {
-    let Languages = [
-        {
-            "title": "HTML",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident, eum animi rerum veritatis repellat impedit nulla optio. Quo, eligendi aliquam? Maiores nam vero vel a modi praesentium vitae doloremque."
-        },
-        {
-            "title": "React",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident, eum animi rerum veritatis repellat impedit nulla optio. Quo, eligendi aliquam? Maiores nam vero vel a modi praesentium vitae doloremque."
-        },
-        {
-            "title": "Express",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident, eum animi rerum veritatis repellat impedit nulla optio. Quo, eligendi aliquam? Maiores nam vero vel a modi praesentium vitae doloremque."
-        },
-        {
-            "title": "CSS",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident, eum animi rerum veritatis repellat impedit nulla optio. Quo, eligendi aliquam? Maiores nam vero vel a modi praesentium vitae doloremque."
-        },
-        {
-            "title": "Javascript",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident, eum animi rerum veritatis repellat impedit nulla optio. Quo, eligendi aliquam? Maiores nam vero vel a modi praesentium vitae doloremque."
-        },
-        {
-            "title": "Node.js",
-            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident, eum animi rerum veritatis repellat impedit nulla optio. Quo, eligendi aliquam? Maiores nam vero vel a modi praesentium vitae doloremque."
-        },
-    ]
-    return (Languages.map((el) => {
-        <h2>{el.title}</h2>;
-        <p>{el.content}</p>
-    }))
+    let card = languages.map((el) => {
+        return (<div className="card">
+            <h4 key={el.id}>{el.title}</h4>
+            <p key={el.id}>{el.description}</p>
+        </div>)
+
+    })
+    return card
 }
+
 
 export default CardComponent;
